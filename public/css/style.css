@@ -289,7 +289,7 @@ a:active {
 
 .thisOption {
     position: relative;
-    display: inline-block;
+    float: left;
     text-align: left;
     padding: 7px;
     margin: auto;

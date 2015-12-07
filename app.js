@@ -13,8 +13,8 @@ require('./models/Books');
 require('./models/Users');
 require('./config/passport');
 
-mongoose.connect(process.env.MONGOLAB_URI)
-//mongoose.connect('mongodb://localhost/book') //Local testing DB path
+//mongoose.connect(process.env.MONGOLAB_URI)
+mongoose.connect('mongodb://localhost/book') //Local testing DB path
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
