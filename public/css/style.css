@@ -33,14 +33,12 @@ a:active {
 .header {
     width: 100%;
     background: none;
-    background-color: #804A44;
+    background-color: rgba(0,0,0,0);
     padding-left: 15%;
     padding-right: 15%;
     color:#fff;
     margin: 0;
     margin: auto;
-    height: 50px;
-    clear: both;
 }
 
 .header a:hover {
