@@ -1,7 +1,9 @@
 <div class = "formContainer">
     <h2>{{book.title}}</h2>
-    Description: {{book.description}} <br />
-    Author:  {{book.writer}} <br />
+    <h3>Description: </h3><br>
+    {{book.description}} <br>
+    <h3>Author:  </h3><br>
+    {{book.writer}} <br>
     
     <button ng-click = "msgOwner()" class = "smallOutline submitBook" ng-hide = "doYouOwn === 1">Message Owner</button>
     
