@@ -24,7 +24,7 @@ app.config([
         
             .state('thebook', {
                 url: '/books/{id}',
-                templateUrl: '/thebook.html',
+                templateUrl: '/theBook.html',
                 controller: 'theBookCtrl',
                 resolve: {
                     book: ['$stateParams', 'books', function ($stateParams, books) {
