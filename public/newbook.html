@@ -1,0 +1,19 @@
+<div class = "formContainer">
+    <h2>Submit A Book</h2>
+    <form ng-submit = "addBook()" class = "row">
+        <div class = "col-xs-6">
+            <h4>Book Title:</h4>
+            <input class = "outline" type = "text" placeholder = "Book title" ng-model = "title" required>
+        </div>
+        <div class = "col-xs-6">
+            <h4>Author:</h4>
+            <input class = "outline" ng-model="writer" placeholder = "Author">
+        </div>
+        <h4>Book Description:</h4>
+        <textarea rows="4" cols="50" class = "bigOutline" ng-model="description" placeholder = "Description"></textarea>
+        <span style = "text-align: center">
+        <input class = "smallOutline submitBook" type = "submit" value = "Submit" id = "submitBook"></span>
+        <span style = "color: red">{{error}}</span>
+    </form>
+</div>
+<div class = "formSpacer"></div>

@@ -1,0 +1,15 @@
+<div class = "profileView">
+    <div class = "profileNav row">
+        <a href = "#/profile"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(1)}">Your Books</div></a>
+        <a href = "#/profile/messages"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(2)}">Messages</div></a>
+        <a href = "#/profile/about"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(3)}">About You</div></a>
+    </div>
+    <div ng-show = "messages.length == 0">You have no messages to show.</div>
+    <div ng-repeat = "message in messages" class = "messageContainer">
+        {{message.from}} wants to trade {{message.gift}} for {{message.for}}
+        <a href ng-click = "acceptTrade($index)"><i class="fa fa-check" style = "color: #2A982A"></i></a>
+        <a href ng-click = "declineTrade($index)"><i class="fa fa-ban" style = "color: #BD3434"></i></a>
+    </div>
+</div>  
+
+<div class = "formSpacer"></div>

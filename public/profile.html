@@ -1,0 +1,15 @@
+<div class = "profileView">
+    <div class = "profileNav row">
+        <a href = "#/profile"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(1)}">Your Books</div></a>
+        <a href = "#/profile/messages"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(2)}">Messages</div></a>
+        <a href = "#/profile/about"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(3)}">About You</div></a>
+    </div>
+    <div ng-repeat = "book in books"  class = "thisOption">
+        <a href = "#/books/{{book._id}}">
+            <div class = "fillBox padRight">{{book.title}}
+            </div>
+        </a>
+    <div ng-click = "delete(book)" class = "deleteBook">X</div>
+</div>  
+</div>
+<div class = "formSpacer"></div>

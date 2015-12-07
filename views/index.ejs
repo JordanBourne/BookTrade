@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Book Trade</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src='js/angular.min.js'></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/angularIndex.js"></script>     
+  </head>
+<body ng-app = "display">
+    
+<div class = "pageContainer">
+    <div class = "header" ng-controller="NavCtrl">
+        <div class = "pageTitle"><a href = "#/home">VoteCaster</a></div>
+        <div ng-hide = "isLoggedIn()" class = "headButton"><a href  = "#/login">Log In</a></div>
+        <div ng-hide = "isLoggedIn()" class = "headButton"><a href  = "#/register">Register</a></div>
+        <div ng-show = "isLoggedIn()" class = "headButton"><a href  = "" ng-click = "logOut()">Log Out</a></div>
+        <div ng-show = "isLoggedIn()" class = "headButton"><a href  = "#/profile">Profile</a></div>
+    </div>
+    <div class = "mainContent">
+        <div class = "boxCover">
+            <h1>BookTrade</h1>
+            <div class = "voteButtonWrap">
+                <a href = "#/books"><div class="register voteButton">View Books</div></a>
+                <a href = "#/newbook"><div class="logIn voteButton">New Book</div></a>
+            </div>
+        </div>
+        </div>
+            <ui-view></ui-view>
+</div>
+
+    <div class = "footer">
+        FreeCodeCamp Basejump | By Jordan Bourne
+    </div>
+</body>
+</html>

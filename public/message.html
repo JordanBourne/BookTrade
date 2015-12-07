@@ -1,0 +1,13 @@
+<div class = "formContainer">
+    <h2>Trade Offer</h2>
+    You are inquiring about: {{book.title}}<br />
+    <textarea rows="4" cols="50" class = "bigOutline" ng-model="messageText" placeholder = "Message to {{book.author}}">
+        Hello {{book.author}}, I'm interested in trading for {{book.title}}.
+    </textarea>  
+    Let's sweeten the deal! <br>How about offering one of your books in return:<br>
+    <select ng-model = "gift">
+        <option ng-repeat = "yourBook in books" value = "{{$index}}">{{yourBook.title}}</option>
+    </select><br>
+    <button ng-click = "msgOwner()" class = "smallOutline submitBook">Message Owner</button>
+</div>
+<div class = "formSpacer"></div>

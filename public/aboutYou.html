@@ -1,0 +1,35 @@
+<div class = "profileView">
+    <div class = "profileNav row">
+        <a href = "#/profile"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(1)}">Your Books</div></a>
+        <a href = "#/profile/messages"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(2)}">Messages</div></a>
+        <a href = "#/profile/about"><div class = "profileBooks col-xs-4" ng-class = "{active: isTab(3)}">About You</div></a>
+    </div>
+    <div class = "abtWrapper">
+        <div class = "abtContainerL">
+            <div class = "abtText">Full Name: </div><br>
+            <div class = "abtText">City:</div><br>
+            <div class = "abtText">State:</div><br>
+            
+            <input type = "submit" ng-show = "editInfo(1)" class = "smallOutline abtCancel" value = "Cancel" ng-click = "cancelEdit()">
+        </div>  
+        <div class = "abtContainerR">
+            <form class = "abtInfo" ng-submit = "saveInfo()">
+                <div class = "abtText" ng-show = "editInfo(0)">{{displayInfo.fullname}}</div>
+                <input type = "text" ng-model = "fullname" ng-show = "editInfo(1)" class = "abtInput" value = "fullname">
+                <br>
+                
+                <div class = "abtText" ng-show = "editInfo(0)">{{displayInfo.city}}</div>
+                <input type = "text" ng-model = "city" ng-show = "editInfo(1)" class = "abtInput" value = "city">
+                <br>
+                
+                <div class = "abtText" ng-show = "editInfo(0)">{{displayInfo.state}}</div>
+                <input type = "text" ng-model = "state" ng-show = "editInfo(1)" class = "abtInput" value = "state">
+                <br>
+                
+                <input type = "submit" ng-show = "editInfo(1)" class = "smallOutline submitBook">
+            </form>
+        </div>
+        <button ng-show = "editInfo(0)" class = "smallOutline abtUpdate" ng-click = "changeInfo()">Update</button>
+    </div>
+</div>
+<div class = "formSpacer"></div>
