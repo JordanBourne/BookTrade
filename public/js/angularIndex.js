@@ -476,7 +476,6 @@ app.controller('MsgCenterCtrl', [
     }
 ]);
 
-
 app.controller('NavCtrl', [
     '$scope',
     'auth',
@@ -486,7 +485,6 @@ app.controller('NavCtrl', [
         $scope.logOut = auth.logOut;
     }
 ]);
-
 
 app.controller('AboutCtrl', [
     '$scope',

@@ -126,6 +126,14 @@ router.put('/books/:book/:vote', auth, function(req, res, next) {
     });
 });
 
+router.delete('/books/:book', function(req, res, next) {
+    req.book.remove(function(err, book){
+        if (err) { return next(err); }
+
+        res.json(book);
+    });
+});
+
 router.delete('/trades/:id', function(req, res, next) {
     Message.remove({_id: req.params.id}, function(err, result) {
         
