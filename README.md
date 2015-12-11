@@ -1,5 +1,7 @@
 # Manage a Book Trading Club
 
+Link: http://book-trade.herokuapp.com/# Tools Used: MongoDB, Express.js, Angular.js, Node.js, HTML5, CSS3
+
 Objective: Build a full stack JavaScript app that successfully reverse-engineers this: http://bookjump.herokuapp.com/ and deploy it to Heroku.
 
 http://www.freecodecamp.com/challenges/basejump-manage-a-book-trading-club
